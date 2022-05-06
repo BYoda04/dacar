@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* button {
+    all: unset;
+} */
+
+.father{
+    background: url(../img/pexels-yan-krukov-8867262.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.father form{
+    width: 700px;
+    height: 500px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form div div{
+    margin-top: 1em;
+    align-content: center;
+}
+
+form div p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+

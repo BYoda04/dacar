@@ -23,7 +23,7 @@
                     array_push($datos['items'],$item);
                 }
 
-                return json_encode($datos);
+                echo json_encode($datos);
 
 
             }   else {

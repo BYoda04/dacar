@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--STYLES LOGIN DACARTELECOM-->
     <link rel="stylesheet" href="./assets/styles/styles-login.css">
-    <title>Sesiones</title>
+    <title>DACARTELECOM</title>
 </head>
 <body>
     <div class="father">
@@ -23,7 +23,7 @@
                 <div>
                     <h2>Iniciar sesión</h2>
                     <p>Nombre de usuario: <br>
-                    <input type="text" name="username"></p>
+                    <input type="text" name="username" id="user"></p>
                     <p>Password: <br>
                     <input type="password" name="password"></p>
                     <p class="center"><input type="submit" value="Iniciar Sesión"></p>
@@ -32,4 +32,8 @@
         </form>
     </div>
 </body>
+
+    <!--VALIDAR ROLES-->
+    <script src="./assets/js/user-export.js"></script>
+
 </html>

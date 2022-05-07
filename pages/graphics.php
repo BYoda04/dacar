@@ -1,6 +1,6 @@
-<?php require_once './layout/nav-top.php' ?>
+<?php require_once './pages/layout/nav-top.php' ?>
 
-<?php require_once './layout/nav-left.php' ?>
+<?php require_once './pages/layout/nav-left.php' ?>
 
 </section>
 
@@ -56,4 +56,4 @@
         </section>
 
 
-<?php require_once './layout/footer.php' ?>
+<?php require_once './pages/layout/footer.php' ?>

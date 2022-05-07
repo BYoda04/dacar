@@ -20,7 +20,7 @@
     $query = mysqli_query($conexion,$insertar);
 
     if ($query) {
-        header("location:../pages/input-data.php");
+        header("location:../../index-data.php");
     } else {
         echo "error";
     }

@@ -3,9 +3,9 @@ let fechaEnviar = document.getElementById('date')
 
 const meses = ["01","02","03","04","05","06","07","08","09","10","11","12"]
 
-let fechaActual = new Date()
+let fechaActualInputData = new Date()
 
-fechaEnviar.value = `${fechaActual.getFullYear()}-${meses[fechaActual.getMonth()]}-${fechaActual.getDate()<10 ? "0" + fechaActual.getDate() : fechaActual.getDate()}`
+fechaEnviar.value = `${fechaActualInputData.getFullYear()}-${meses[fechaActualInputData.getMonth()]}-${fechaActualInputData.getDate()<10 ? "0" + fechaActualInputData.getDate() : fechaActualInputData.getDate()}`
 
 /*FUNCTION*/ 
 

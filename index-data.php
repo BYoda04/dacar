@@ -10,8 +10,8 @@ $user = new User();
 if(isset($_SESSION['user'])){
     //echo "Hay sesión";
     $user->setUser($userSession->getCurrentUser());
-    /* include_once 'pages/home.php'; */
-    header("location:./index-graphics.php");
+    include_once 'pages/input-data.php';
+    /* header("location:pages/graphics.php"); */
 }else if(isset($_POST['username']) && isset($_POST['password'])){
     //echo "Validación de login";
 
@@ -23,8 +23,8 @@ if(isset($_SESSION['user'])){
         $userSession->setCurrentUser($userForm);
         $user->setUser($userForm);
 
-        /* include_once 'pages/home.php'; */
-        header("location:./index-graphics.php");
+        include_once 'pages/indput-data.php';
+        /* header("location:pages/graphics.php"); */
     }else{
         //echo "nombre de usuario y/o password incorrecto";
         $errorLogin = "Nombre de usuario y/o password es incorrecto";

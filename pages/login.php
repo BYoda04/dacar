@@ -23,7 +23,7 @@
                 <div>
                     <h2>Iniciar sesión</h2>
                     <p>Nombre de usuario: <br>
-                    <input type="text" name="username" id="user"></p>
+                    <input type="text" name="username"></p>
                     <p>Password: <br>
                     <input type="password" name="password"></p>
                     <p class="center"><input type="submit" value="Iniciar Sesión"></p>
@@ -34,6 +34,6 @@
 </body>
 
     <!--VALIDAR ROLES-->
-    <script src="./assets/js/user-export.js"></script>
+    <script src="./assets/js/user-export.js" type="module"></script>
 
 </html>

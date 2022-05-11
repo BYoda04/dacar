@@ -54,6 +54,5 @@
             </div>
 
         </section>
-
-
+        
 <?php require_once './pages/layout/footer.php' ?>

@@ -1,11 +1,11 @@
 <?php
 
-include_once '../../db.php';
+include_once '../db.php';
 
 class Datos extends DB{
 
     function obtenerData(){
-        $query = $this->connect()->query('SELECT * FROM roles');
+        $query = $this->connect()->query('SELECT * FROM campañas');
 
         return $query;
     }

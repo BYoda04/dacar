@@ -1,0 +1,41 @@
+
+.save-data{
+    width: 100%;
+    padding: 15px;
+    background: #202530;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input-data{
+    text-align: center;
+}
+
+.input-data h2{
+    padding-bottom: 15px;
+}
+
+.date-data.movil{
+    width: 100%;
+    height: auto;
+    background: #202530;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: .5em;
+    text-align: center;
+}
+
+.formularios{
+    background: #fff;
+    color: #111;
+}
+
+.edit{
+    cursor: pointer;
+}

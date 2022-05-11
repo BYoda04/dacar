@@ -1,6 +1,6 @@
 <?php
 
-    include_once 'obtener-users.php';
+    include_once 'get-state.php';
 
     class apiData{
 
@@ -16,9 +16,8 @@
                 
                 while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
                     $item = array(
-                        'user' => $row['nom_user'],
-                        'cargo' => $row['tip_user'],
-                        'rol' => $row['rol_user']
+                        'id_state' => $row['id_state'],
+                        'nom_state' => $row['nam_state']
                     );
                     array_push($datos['items'],$item);
                 }

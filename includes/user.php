@@ -4,7 +4,7 @@ include_once 'db.php';
 
 class User extends DB{
 
-    private $nombre;
+    private $rol;
     private $username;
 
     public function userExists($user, $pass){
@@ -24,13 +24,17 @@ class User extends DB{
         $query->execute(['user' => $user]);
 
         foreach ($query as $currentUser) {
-            $this->cod_user = $currentUser['cod_user'];
-            $this->nom_user = $currentUser['nom_user'];
+            $this->rol = $currentUser['rol_user'];
+            $this->username = $currentUser['nom_user'];
         }
     }
 
-    public function getNombre(){
-        return $this->nombre;
+    public function getRol(){
+        return $this->rol;
+    }
+
+    public function getUserName(){
+        return $this->username;
     }
 }
 

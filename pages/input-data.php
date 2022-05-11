@@ -4,38 +4,21 @@
 
 </section>
 
-    <section class="form">
+    <section class="form" id="form">
+        
+        <div class="button-container">
 
-        <div class="save-data">
-            <div class="input-data" id="input-data">
-                <h2>Datos de venta</h2>
-                <form id="cantidad" method="POST" action="./includes/input-data/guardar.php">
-                    <input type="date" name="date" id="date">
-                    <input type="number" name="sales" required placeholder="NUMERO DE VENTAS">
-                    <input type="number" name="goal" required placeholder="META">
-                    <button type="submit">enviar</button>
-                </form>
-            </div>
-        </div>  
-
-        <div class="date-data" id="form-data">
-            <div class="header-form">
-                <p>Fecha</p>
-            </div>
-            <div class="header-form">
-                <p>Ventas</p>
-            </div>
-            <div class="header-form">
-                <p>Meta</p>
-            </div>
-            <div class="header-form">
-                <p>Editar</p>
+            <div class="button">
+                <div class="icon" id="movil"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+                <h2>MOVIL</h2>
             </div>
 
-            <?php include_once './includes/input-data/obtener-input-data.php'?>
+            <div class="button">
+                <div class="icon" id="hogar"><ion-icon name="home-outline"></ion-icon></div>
+                <h2>HOGAR</h2>
+            </div>
 
         </div>
-
 
     </section>
 

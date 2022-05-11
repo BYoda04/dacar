@@ -14,10 +14,15 @@ main{
 
 a{
     color: #111;
+    text-decoration: none;
 }
 
 ion-icon{
     color: #111;
+}
+
+li{
+    list-style: none;
 }
 
 .container{
@@ -50,9 +55,62 @@ ion-icon{
     align-items: center;
 }
 
-.user div{
+.user .log-out{
     cursor: pointer;
     font-size: 2.5em;
+}
+
+.user-settings{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-description{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 2em;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.settings-description li{
+    visibility: hidden;
+    list-style: none;
+    font-size: 1.5em;
+} 
+
+.settings-description.active{
+    transform: translateY(125px);
+    width: auto;
+    height: auto;
+    background: #fff;
+    border-radius: 2em;
+    visibility: visible;
+}
+
+.settings-description.active li{
+    padding: 15px;
+    font-weight: 700;
+    color: #111;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    visibility: visible;
+}
+
+.toggle{
+    font-size: 2.5em;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    cursor: pointer;
 }
 
 /*NAV LEFT*/
@@ -233,42 +291,60 @@ svg circle:nth-child(2){
     color: #fff;
 }
 
-.save-data{
-    width: 100%;
-    padding: 15px;
-    background: #202530;
+.button-container{
+    width: auto;
+    height: 90vh;
     color: #fff;
-    margin-bottom: 20px;
-}
-
-form{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.input-data{
-    text-align: center;
-}
-
-.input-data h2{
-    padding-bottom: 15px;
-}
-
-.date-data{
-    width: 100%;
-    height: auto;
+.button{
+    width: 250px;
+    height: 250px;
+    padding: 1em;
+    margin: 3em;
     background: #202530;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
     text-align: center;
+    border-radius: 2em;
 }
 
-.formularios{
-    background: #fff;
-    color: #111;
+.button h2{
+    padding-bottom: 1em;
 }
 
-.edit{
+.icon ion-icon{
     cursor: pointer;
+    font-size: 10em;
+    color: #fff;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.back{
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.back ion-icon{
+    font-size: 1.5em;
+    color: #fff;
+}
+
+/*ACCOUNT*/
+
+.cards{
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    text-align: center;
+    border-radius: 2em;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

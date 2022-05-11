@@ -23,8 +23,9 @@ if(isset($_SESSION['user'])){
         $userSession->setCurrentUser($userForm);
         $user->setUser($userForm);
 
-        /* include_once 'pages/home.php'; */
+        /* include_once 'pages/graphics.php'; */
         header("location:./index-graphics.php");
+        /* include_once 'rol-prueba.php';  */
     }else{
         //echo "nombre de usuario y/o password incorrecto";
         $errorLogin = "Nombre de usuario y/o password es incorrecto";

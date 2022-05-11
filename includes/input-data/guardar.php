@@ -12,8 +12,12 @@
     }
 
     $date = $_POST['date'];
-    $sales = $_POST['sales'];
-    $goal = $_POST['goal'];
+    $nom = $_POST['name'];
+    $rol = $_POST['rol'];
+
+    echo $date;
+    echo $nom;
+    echo $rol;
 
     $insertar = "INSERT INTO ventas(fecha_vnt,cant_vnt,met_vnt) VALUES('$date','$sales','$goal')";
 

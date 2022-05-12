@@ -284,7 +284,7 @@ svg circle:nth-child(2){
 /*FORMULARIO STYLES*/
 
 .form{
-    width: 100%;
+    width: 90vw;
     height: 100vh;
     padding: 25px;
     background: #090B0F;

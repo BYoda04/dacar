@@ -10,6 +10,9 @@ let urlAsesor = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-asesores/API-
 
 let supervisorAsesor
 let asesor
+let searchSup
+let optionS
+
 
 
 fetch(urlSupAsesor)
@@ -39,6 +42,10 @@ movil.addEventListener("click",()=>{
     console.log(nameUser);
     console.log(rolUser);
 
+    for (let i = 0; i < supervisorAsesor.items.length; i++) {
+        optionsS += `<option value="${supervisorAsesor.items[i].id_sup}">${supervisorAsesor.items[i].nom_sup}</option>`
+    }
+
     form.innerHTML = `<div class="save-data">
             <div class="input-data" id="input-data">
                 <div class="title">
@@ -48,7 +55,9 @@ movil.addEventListener("click",()=>{
                     <h2>Datos de venta Movil</h2>
                 </div>
                 <form id="cantidad" method="POST" action="./includes/input-data/guardar.php">
-                    <input type="text" name="date" id="date">
+                    <select name="sup" id="search-sup">
+
+                    </select>
                     <input type="date" name="date" id="date">
                     <button type="submit">enviar</button>
                 </form>
@@ -155,6 +164,10 @@ movil.addEventListener("click",()=>{
             </div>
 
         </div>`
+
+        searchSup = document.getElementById('search-sup')
+        searchSup.innerHTML = optionS
+
 })
 
 hogar.addEventListener("click",()=>{

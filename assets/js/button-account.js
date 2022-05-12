@@ -5,20 +5,25 @@ const delet = document.getElementById('delete')
 let urlCamp = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-camp/API-camp.php"
 let urlTurn = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-turn/API-turn.php"
 let urlSup = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-sup/API-sup.php"
+let urlAsesor = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-asesore/API-asesores.php"
 let createSupervisor
 let createAsesor
 let deletSupervisor
 let deletAsesor
+let searchAsesor
 let camp
 let turn
 let sup
 let newSup
+let asr
 let campañas 
 let turno
-let supervisor 
+let supervisor
+let asesor 
 let optionsCamp
 let optionsTurn
 let optionsSup
+let optionsAsesor
 
 fetch(urlCamp)
 .then(r=>r.json())
@@ -44,8 +49,13 @@ fetch(urlSup)
 
 })
 
+fetch(urlAsesor)
+.then(r=>r.json())
+.then(r=>{
 
+    asesor = r
 
+})
 
 
 create.addEventListener("click",()=>{
@@ -198,8 +208,11 @@ delet.addEventListener("click",()=>{
                             <p>Supervisor: <br>
                             <select name="sup" id="sup">
                                 
+                            </select><ion-icon name="search-outline" id="search-asesor"></ion-icon></p>
+                            <p>Asesor: <br>
+                            <select name="asesor" id="asesor">
+                                
                             </select></p>
-                            <p class="center"><input type="submit" value="buscar asesores"></p>
                         </div>
                     </div>
                 </form>
@@ -207,5 +220,15 @@ delet.addEventListener("click",()=>{
 
             sup = document.getElementById('sup')
             sup.innerHTML = optionsSup
+
+            console.log(sup);
+
+            searchAsesor = document.getElementById('search-asesor')
+
+            /* searchAsesor.addEventListener("click",e=>{
+                e.preventDefault()
+
+                
+            }) */
     })
 })

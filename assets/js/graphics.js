@@ -1,6 +1,8 @@
 
 const measurer = document.getElementById('measurer')
 const search = document.getElementById('search')
+const supG = document.getElementById('sup-graph')
+const asesorG = document.getElementById('asesor-graph')
 const month = ["01","02","03","04","05","06","07","08","09","10","11","12"]
 
 let fechaActualGraphics = new Date()
@@ -8,6 +10,7 @@ let fechaActualGraphics = new Date()
 /*ELEMENTS HTML*/
 
 //API PHP
+let urlSG = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-sup/API-sup.php"
 let url = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-graphics/API-datos.php"
 
 let fechaVentaUno = document.getElementById('date-uno-campaña')
@@ -18,6 +21,8 @@ let dataMeta = document.getElementById('data-meta')
 let vendido 
 let metaDiaria
 let save 
+let supGname
+let optionSG
 
 fechaVentaUno.value = `${fechaActualGraphics.getFullYear()}-${month[fechaActualGraphics.getMonth()]}-${fechaActualGraphics.getDate()<10 ? "0" + fechaActualGraphics.getDate() : fechaActualGraphics.getDate()}`
 
@@ -157,4 +162,22 @@ const searchPercent = (event)=> {
 
 search.addEventListener("submit", e => searchPercent(e))
 
+/*SUPERVISORES AND ASESORES*/
 
+fetch(urlSG)
+.then(r=>r.json())
+.then(r=>{
+
+    supGname = r
+
+    setTimeout(() => {
+        for (let i = 0; i < supGname.items.length; i++) {
+            optionSG += `<option value="${supGname.items[i].id_sup}">${supGname.items[i].nom_sup}</option>`
+        }
+
+        supG.innerHTML += `${optionSG}`
+    }, 1000);
+
+})
+
+console.log("hola")

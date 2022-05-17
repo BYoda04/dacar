@@ -10,6 +10,7 @@
     if($conexion-> connect_error){
         die("Conexión fallida: " . $conexion-> connect_error);
     } 
+    
     $user = $_POST['username'];
     $pass = $_POST['password'];
     $camp = $_POST['camp'];

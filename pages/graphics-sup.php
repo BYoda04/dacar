@@ -11,12 +11,6 @@
                     <h2>Porcentajes de ventas</h2>
                 </div>
                 <div>
-                    <p>Supervisor:</p>
-                    <select name="supervisor" id="sup-graph">
-
-                    </select>
-                </div>
-                <div>
                     <p>Asesor:</p>
                     <select name="asesor" id="asesor-graph">
 

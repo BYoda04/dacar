@@ -5,12 +5,13 @@ const delet = document.getElementById('delete')
 let urlCamp = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-camp/API-camp.php"
 let urlTurn = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-turn/API-turn.php"
 let urlSup = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-sup/API-sup.php"
-let urlAsesor = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-asesore/API-asesores.php"
+let urlAsesorAccount = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-asesores/API-asesores.php"
 let createSupervisor
 let createAsesor
 let deletSupervisor
 let deletAsesor
 let searchAsesor
+let asesorContainer
 let camp
 let turn
 let sup
@@ -49,7 +50,7 @@ fetch(urlSup)
 
 })
 
-fetch(urlAsesor)
+fetch(urlAsesorAccount)
 .then(r=>r.json())
 .then(r=>{
 
@@ -177,7 +178,7 @@ delet.addEventListener("click",()=>{
                             <select name="sup" id="sup">
                                 
                             </select></p>
-                            <p>NUevo supervisor: <br>
+                            <p>Nuevo supervisor: <br>
                             <select name="new-sup" id="new-sup">
                                 
                             </select></p>
@@ -200,7 +201,7 @@ delet.addEventListener("click",()=>{
         }
 
         formAccount.innerHTML = `<div class="cards">
-                <form method="POST">
+                <form method="POST" action="./includes/account/delete-asesor/delete-asesor.php">
                     <div>
                         <img src="./assets/img/dacartelecom-logo.webp" alt="dacartelecom">
                         <div>
@@ -208,11 +209,11 @@ delet.addEventListener("click",()=>{
                             <p>Supervisor: <br>
                             <select name="sup" id="sup">
                                 
-                            </select><ion-icon name="search-outline" id="search-asesor"></ion-icon></p>
-                            <p>Asesor: <br>
-                            <select name="asesor" id="asesor">
+                            </select><br>
+                            <ion-icon name="search-outline" id="search-asesor"></ion-icon></p>
+                            <div id="asesor-container">
                                 
-                            </select></p>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -221,14 +222,31 @@ delet.addEventListener("click",()=>{
             sup = document.getElementById('sup')
             sup.innerHTML = optionsSup
 
-            console.log(sup);
-
             searchAsesor = document.getElementById('search-asesor')
+            asesorContainer = document.getElementById('asesor-container')
 
-            /* searchAsesor.addEventListener("click",e=>{
+            searchAsesor.addEventListener("click",e=>{
                 e.preventDefault()
 
+                optionsAsesor = null
+
+                asesorContainer.innerHTML = `<p>Asesor: <br>
+                                    <select name="asesor" id="asesor">
+                                    
+                                    </select></p>
+                                <p class="center"><input type="submit" value="Eliminar"></p>`
+
+                for (let i = 0; i < asesor.items.length; i++) {
+                    if (parseInt(sup.value) === asesor.items[i].cod_sup) {
+                        if (asesor.items[i].sate !== 2) {
+                            optionsAsesor += `<option value="${asesor.items[i].id_asesor}">${asesor.items[i].asesor}</option>`
+                        }
+                    }
+                }
+
+                asr = document.getElementById('asesor')
+                asr.innerHTML = optionsAsesor
                 
-            }) */
+            })
     })
 })

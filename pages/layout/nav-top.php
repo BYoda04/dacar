@@ -34,8 +34,6 @@
                         <ul class="settings-description" id="settings-description">
                         <li><p id="name"><?php echo $user->getUserName();  ?></p><ion-icon name="person-outline"></ion-icon></li>
                         <li><p id="rol"><?php echo $user->getRol();  ?></p><ion-icon name="checkmark-outline"></ion-icon></li>
-                        <li><a href="">Ajustes</a><ion-icon name="settings-outline"></ion-icon></li>
-                        </ul>
                 </div>
     
                 <div class="log-out">

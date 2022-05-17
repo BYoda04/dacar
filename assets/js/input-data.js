@@ -1,90 +1,65 @@
 
-let fechaEnviar = document.getElementById('date')
+const form = document.getElementById('form')
+const movil = document.getElementById('movil')
+const hogar = document.getElementById('hogar')
+const searchS = document.getElementById('search-sup')
+const searchAsr = document.getElementById('search-asr')
+const mesAdmin = ["01","02","03","04","05","06","07","08","09","10","11","12"]
+const fechaAdmin = document.getElementById('date')
 
-const meses = ["01","02","03","04","05","06","07","08","09","10","11","12"]
+let urlSA = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-sup/API-sup.php"
+let urlA = "../../DACARTELECOM-SISTEMA-DE-VENTAS/includes/API-asesores/API-asesores.php"
 
-let fechaActualInputData = new Date()
-
-fechaEnviar.value = `${fechaActualInputData.getFullYear()}-${meses[fechaActualInputData.getMonth()]}-${fechaActualInputData.getDate()<10 ? "0" + fechaActualInputData.getDate() : fechaActualInputData.getDate()}`
-
-/*FUNCTION*/ 
-
-/* let save = JSON.parse(localStorage.getItem('datos')) */
-
-const storageFormulario = (fecha,ventas,metas) =>{
-
-    /*LOCCAL STORAGE SAVE*/ 
-    datos.push(
-        {
-            fecha: fecha,
-            venta: ventas,
-            meta: metas,
-        }
-    )
-
-    /* localStorage.setItem('datos', JSON.stringify(datos)) */
-
-}
+let supervisorAsesor
+let asesorS
+let optionS
+let asesorList
+let formdate
+let edit = true
+let actualDate = new Date()
 
 
 
-/* const agregarFormulario = (fecha,ventas,metas)=>{
+fetch(urlSA)
+.then(r=>r.json())
+.then(r=>{
 
-    formularioData.innerHTML += `
-            <div class="formularios">
-                <p>${fecha}</p>
-            </div>
-            <div class="formularios">
-                <p>${ventas}</p>
-            </div>
-            <div class="formularios">
-                <p>${metas}</p>
-            </div>
-            <div class="formularios edit">
-                <ion-icon name="pencil-outline"></ion-icon>
-            </div>
-    `
+    supervisorAsesor = r
 
-} */
+})
 
+fetch(urlA)
+.then(r=>r.json())
+.then(r=>{
 
+    asesorS = r
 
-/* function formulario (event){
-    event.preventDefault()
-    
-    fechaEnviar = document.getElementById('date')
+})
 
-    number = document.getElementById('number')
-    meta = document.getElementById('meta')
-
-    storageFormulario(fechaEnviar.value,number.value,meta.value)
-
-    agregarFormulario(fechaEnviar.value,number.value,meta.value)
-
-} */
-
-/*SAVE DATA*/
-
-/* cantidadEnviar.addEventListener("submit", e => formulario(e)) */
-
-/*DATOS SAVE*/
-
-/* !function () {
-
-    if (save !== null) {
-     
-        for (let i = 0; i < save.length; i++) {
-        
-            datos.push(save[i])
-        
-        }
-    
-        for (let i = 0; i < datos.length; i++) {
-    
-            agregarFormulario(datos[i].fecha,datos[i].venta,datos[i].meta)
-    
-        }
-    
+setTimeout(() => {
+    for (let i = 0; i < supervisorAsesor.items.length; i++) {
+        optionS += `<option value="${supervisorAsesor.items[i].id_sup}">${supervisorAsesor.items[i].nom_sup}</option>`
     }
+    
+    searchS.innerHTML = optionS
 
-}(); */
+    fechaAdmin.value = `${actualDate.getFullYear()}-${mesAdmin[actualDate.getMonth()]}-${actualDate.getDate()<10 ? "0" + actualDate.getDate() : actualDate.getDate()}`
+}, 500)
+
+
+searchAsr.addEventListener("click",(e)=>{
+    e.preventDefault()
+
+    for (let i = 0; i < supervisorAsesor.items.length; i++) {
+        if (parseInt(searchS.value)===supervisorAsesor.items[i].id_sup) {
+            console.log(parseInt(searchS.value))
+            console.log(supervisorAsesor.items[i].id_sup)
+        }
+    }
+})
+
+
+    
+
+
+

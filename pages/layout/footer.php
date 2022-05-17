@@ -15,9 +15,12 @@
         <script src="./assets/js/graphics.js"></script>
 
         <!--SCRIPT BUTTON DATA-->
-        <script src="./assets/js/button-input-data.js"></script>
+        <script src="./assets/js/input-data.js"></script>
         <!--SCRIPT BUTTON ACCOUNT-->
         <script src="./assets/js/button-account.js"></script>
+
+        <!--PROOB-->
+        <script src="./assets/js/input-data-sup.js"></script>
 
     
     </html>

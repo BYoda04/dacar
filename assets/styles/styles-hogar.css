@@ -1,13 +1,13 @@
 
 .save-data{
-    width: 100%;
+    width: 100vw;
     padding: 15px;
     background: #202530;
     color: #fff;
     margin-bottom: 20px;
 }
 
-form{
+#cantidad{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,13 +22,14 @@ form{
 }
 
 .date-data.hogar{
-    width: 90vw;
+    width: 100%;
     height: auto;
     background: #202530;
     display: grid;
     grid-template-columns: repeat(7,1fr);
     column-gap: .5em;
-    text-align: center;
+    row-gap: .5em;
+    text-align: end;
 }
 
 .formularios{

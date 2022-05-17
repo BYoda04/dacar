@@ -6,18 +6,25 @@
 
     <section class="form" id="form">
         
-        <div class="button-container">
-
-            <div class="button">
-                <div class="icon" id="movil"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-                <h2>MOVIL</h2>
+        <div class="save-data">
+            <div class="input-data" id="input-data">
+                <div class="title">
+                    <h2>Datos de ventas</h2>
+                </div>
+                <form id="cantidad" method="POST">
+                    <select name="sup" id="search-sup">
+    
+                    </select>
+                    <input type="date" name="date" id="date">
+                    <button id="search-asr">buscar</button>
+                </form>
             </div>
-
-            <div class="button">
-                <div class="icon" id="hogar"><ion-icon name="home-outline"></ion-icon></div>
-                <h2>HOGAR</h2>
-            </div>
-
+        </div> 
+            
+        <div>
+    
+            
+    
         </div>
 
     </section>

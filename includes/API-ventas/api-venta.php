@@ -1,6 +1,6 @@
 <?php
 
-    include_once 'get-asesores.php';
+    include_once 'get-ventas.php';
 
     class apiData{
 
@@ -16,12 +16,16 @@
                 
                 while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
                     $item = array(
-                        'id_asesor' => $row['id_asesor'],
-                        'asesor' => $row['asesor'],
-                        'cod_sup' => $row['cod_sup'],
+                        'id_vent' => $row['id_vent'],
                         'cod_camp' => $row['cod_camp'],
-                        'cod_turn' => $row['cod_turn'],
-                        'sate' => $row['state']
+                        'cod_turno' => $row['cod_turno'],
+                        'cod_sup' => $row['cod_sup'],
+                        'cod_asesor' => $row['cod_asesor'],
+                        'ventas' => $row['ventas'],
+                        'meta' => $row['meta'],
+                        'product' => $row['product'],
+                        'UGI' => $row['UGI'],
+                        'fecha' => $row['fecha']
                     );
                     array_push($datos['items'],$item);
                 }

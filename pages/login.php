@@ -33,7 +33,4 @@
     </div>
 </body>
 
-    <!--VALIDAR ROLES-->
-    <script src="./assets/js/user-export.js" type="module"></script>
-
 </html>

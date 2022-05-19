@@ -8,9 +8,10 @@ class User extends DB{
     private $username;
 
     public function userExists($user, $pass){
+        $md5pass = md5($pass);
 
         $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE nom_user = :user AND password = :pass');
-        $query->execute(['user' => $user, 'pass' => $pass]);
+        $query->execute(['user' => $user, 'pass' => $md5pass]);
 
         if($query->rowCount()){
             return true;

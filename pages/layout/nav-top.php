@@ -11,6 +11,8 @@
     <!--STYLES HOGAR && MOVIL-->
     <link rel="stylesheet" href="./assets/styles/styles-hogar.css">
     <link rel="stylesheet" href="./assets/styles/styles-movil.css">
+    <!--STYLES INPUT-->
+    <link rel="stylesheet" href="./assets/styles/styles-input.css">
     <!--ROl-->
     <?php include_once 'includes/user.php'; ?>
     <title>DACARTELECOM</title>

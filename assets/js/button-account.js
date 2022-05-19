@@ -17,7 +17,7 @@ let turn
 let sup
 let newSup
 let asr
-let campañas 
+let campanas 
 let turno
 let supervisor
 let asesor 
@@ -30,7 +30,7 @@ fetch(urlCamp)
 .then(r=>r.json())
 .then(r=>{
 
-    campañas = r
+    campanas = r
 
 })
 
@@ -77,8 +77,8 @@ create.addEventListener("click",()=>{
     
     createSupervisor.addEventListener("click",()=>{
 
-        for (let i = 0; i < campañas.items.length; i++) {
-            optionsCamp += `<option value="${campañas.items[i].camp}">${campañas.items[i].camp}</option>`
+        for (let i = 0; i < campanas.items.length; i++) {
+            optionsCamp += `<option value="${campanas.items[i].camp}">${campanas.items[i].camp}</option>`
         }
 
         for (let i = 0; i < turno.items.length; i++) {

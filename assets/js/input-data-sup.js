@@ -157,19 +157,19 @@ setTimeout(() => {
                 <p>Total</p>
             </div>
             <div class="header-form">
-                <p id="p1"></p>
+                <p id="p1">0</p>
             </div>
             <div class="header-form">
-                <p id="p2"></p>
+                <p id="p2">0</p>
             </div>
             <div class="header-form">
-                <p id="p3"></p>
+                <p id="p3">0</p>
             </div>
             <div class="header-form">
-                <p id="total"></p>
+                <p id="total">0</p>
             </div>
             <div class="header-form">
-                <p id="ugi"></p>
+                <p id="ugi">0</p>
             </div>
             <div class="header-form">
                 <p></p>
@@ -185,12 +185,6 @@ setTimeout(() => {
         const p3 = document.getElementById('p3')
         const totalAbsolute = document.getElementById('total')
         const totalUgiAbsolute = document.getElementById('ugi')
-
-        p1.innerHTML = 0
-        p2.innerHTML = 0
-        p3.innerHTML = 0
-        totalAbsolute.innerHTML = 0
-        totalUgiAbsolute.innerHTML =0
 
         for (let i = 0; i < nameValue.length; i++) {
             nameValue[i].disabled = true
@@ -211,6 +205,7 @@ setTimeout(() => {
         for (let i = 0; i < checkbox.length; i++) {
             checkbox[i].addEventListener("submit",(e)=>{
                 e.preventDefault()
+
                 let totalNumber = 0
                 let totalUgi = 0
 
@@ -224,7 +219,8 @@ setTimeout(() => {
                 totalUgi+=parseInt(ventas[0].value)
                 totalUgi+=parseInt(ventas[1].value)*2
                 totalUgi+=parseInt(ventas[2].value)*3
-
+                console.log(ventas[1].value)
+                console.log(parseInt(p2.innerText))
                 p1.innerHTML = parseInt(p1.innerHTML) + parseInt(ventas[0].value)
                 p2.innerHTML = parseInt(p2.innerHTML) + parseInt(ventas[1].value)
                 p3.innerHTML = parseInt(p3.innerHTML) + parseInt(ventas[2].value)

@@ -13,9 +13,8 @@
         <script src="./assets/js/input-data.js"></script> 
         <!--SCRIPT GRAPHICS-->
         <script src="./assets/js/graphics.js"></script>
+        <script src="./assets/js/graphics-sup.js"></script>
 
-        <!--SCRIPT BUTTON DATA-->
-        <script src="./assets/js/input-data.js"></script>
         <!--SCRIPT BUTTON ACCOUNT-->
         <script src="./assets/js/button-account.js"></script>
 

@@ -15,6 +15,7 @@
     $pass = $_POST['password'];
     $camp = $_POST['camp'];
     $turn = $_POST['turn'];  
+    $md5pass = md5($pass);
 
     include_once './validate-sup.php';
 
@@ -28,7 +29,7 @@
     $camp = $account->getCamp();
     $turn = $account->getTurn();
 
-    $insertarUsuario = "INSERT INTO usuarios(nom_user,password,rol_user) VALUES('$user','$pass', '2')";
+    $insertarUsuario = "INSERT INTO usuarios(nom_user,password,rol_user) VALUES('$user','$md5pass', '2')";
 
     $insertarSupervisor = "INSERT INTO supervisores(nom_sup,cod_camp,cod_turn) VALUES('$user','$camp','$turn')";
 

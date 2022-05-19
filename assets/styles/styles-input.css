@@ -1,0 +1,33 @@
+
+.date-data.admin{
+    width: auto;
+    height: auto;
+    background: #202530;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    column-gap: .5em;
+    row-gap: .5em;
+    text-align: center;
+}
+
+.none{
+    display: none;
+}
+
+/*HEADER DATA*/
+
+.header-container{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.header-data h2{
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+}
+
+.info-data{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

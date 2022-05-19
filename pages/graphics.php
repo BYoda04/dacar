@@ -21,6 +21,7 @@
                     <select name="asesor" id="asesor-graph">
 
                     </select>
+                    <input type="checkbox" name="asesor-yes" id="asesor-yes">
                 </div>
                 <div>
                     <p>Fecha desde:</p>
@@ -63,6 +64,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="data-container" id="graphics-data-container">
+            
             </div>
 
         </section>

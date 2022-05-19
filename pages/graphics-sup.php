@@ -15,6 +15,7 @@
                     <select name="asesor" id="asesor-graph">
 
                     </select>
+                    <input type="checkbox" name="asesor-yes" id="asesor-yes">
                 </div>
                 <div>
                     <p>Fecha desde:</p>
@@ -24,7 +25,7 @@
                     <p>hasta:</p>
                     <input type="date" id="date-dos-campaña">
                 </div>
-                <div id="search">
+                <div id="search-graphic-sup">
                     <button>search</button>
                 </div>
             </div>
@@ -57,6 +58,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="data-container" id="graphics-data-container-sup">
+            
             </div>
 
         </section>
